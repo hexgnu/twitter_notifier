@@ -1,0 +1,18 @@
+<p>
+  <b>Term:</b>
+  <%=h @term_count.term %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @term_count.date %>
+</p>
+
+<p>
+  <b>Tweet:</b>
+  <%=h @term_count.tweet_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_term_count_path(@term_count) %> |
+<%= link_to 'Back', term_counts_path %>

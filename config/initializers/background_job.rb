@@ -1,6 +1,7 @@
 Thread.new do 
   loop do
-    Delayed::Job.enqueue(TwitterJob.new)
+    a = TwitterJob.new
+    a.perform
     sleep 600
   end
 end  

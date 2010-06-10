@@ -1,0 +1,22 @@
+--- 
+dependencies: 
+  httparty: 
+    group: 
+    - :default
+    version: ">= 0"
+  delayed_job: 
+    group: 
+    - :default
+    version: ">= 0"
+specs: 
+- crack: 
+    version: 0.1.6
+- daemons: 
+    version: 1.0.10
+- delayed_job: 
+    version: 2.0.3
+- httparty: 
+    version: 0.5.2
+hash: d876899c4749674e097d519806edec77874dc4fc
+sources: []
+

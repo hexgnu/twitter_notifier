@@ -22262,3 +22262,1102 @@ Completed in 47ms (View: 40, DB: 1) | 200 OK [http://localhost/terms]
   [4;35;1mTerm Load (0.6ms)[0m   [0mSELECT * FROM "terms" [0m
   [4;36;1mTerm Load (0.6ms)[0m   [0;1mSELECT * FROM "terms" [0m
   [4;35;1mTerm Load (80.7ms)[0m   [0mSELECT * FROM "terms" [0m
+
+
+Processing TermsController#index (for 127.0.0.1 at 2010-06-09 19:12:57) [GET]
+  [4;36;1mTerm Load (1.0ms)[0m   [0;1mSELECT * FROM "terms" [0m
+Rendering template within layouts/terms
+Rendering terms/index
+Completed in 52ms (View: 41, DB: 1) | 200 OK [http://localhost/terms]
+2010-06-09T19:13:07-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6301)] Exiting...
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Update (1.3ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6301') [0m
+
+
+Processing TermsController#index (for 127.0.0.1 at 2010-06-09 19:15:25) [GET]
+  [4;36;1mTerm Load (1.0ms)[0m   [0;1mSELECT * FROM "terms" [0m
+Rendering template within layouts/terms
+Rendering terms/index
+Completed in 55ms (View: 43, DB: 1) | 200 OK [http://localhost/terms]
+
+
+Processing TermsController#new (for 127.0.0.1 at 2010-06-09 19:15:28) [GET]
+Rendering template within layouts/terms
+Rendering terms/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/terms/new]
+
+
+Processing TermsController#create (for 127.0.0.1 at 2010-06-09 19:15:33) [POST]
+  Parameters: {"commit"=>"Create", "term"=>{"threshold"=>"40.40", "term"=>"hello world"}, "authenticity_token"=>"PFnxvXMcFIMRsaUbeHlwvm5GDIEMnHuUbVY30IMKgaM="}
+  [4;35;1mTerm Create (0.5ms)[0m   [0mINSERT INTO "terms" ("created_at", "threshold", "term", "updated_at") VALUES('2010-06-09 23:15:33', 40.4, 'hello world', '2010-06-09 23:15:33')[0m
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Create (0.5ms)[0m   [0;1mINSERT INTO "delayed_jobs" ("failed_at", "locked_by", "created_at", "handler", "updated_at", "priority", "run_at", "attempts", "locked_at", "last_error") VALUES(NULL, NULL, '2010-06-09 23:15:33', '--- !ruby/struct:TwitterJob 
+term_name: hello world
+', '2010-06-09 23:15:33', 0, '2010-06-09 23:15:33', 0, NULL, NULL)[0m
+Redirected to http://localhost:3000/terms/15
+Completed in 118ms (DB: 1) | 302 Found [http://localhost/terms]
+
+
+Processing TermsController#show (for 127.0.0.1 at 2010-06-09 19:15:33) [GET]
+  Parameters: {"id"=>"15"}
+  [4;35;1mTerm Load (0.2ms)[0m   [0mSELECT * FROM "terms" WHERE ("terms"."id" = 15) [0m
+Rendering template within layouts/terms
+Rendering terms/show
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/terms/15]
+
+
+Processing TermsController#index (for 127.0.0.1 at 2010-06-09 19:15:42) [GET]
+  [4;36;1mTerm Load (0.7ms)[0m   [0;1mSELECT * FROM "terms" [0m
+Rendering template within layouts/terms
+Rendering terms/index
+Completed in 29ms (View: 23, DB: 1) | 200 OK [http://localhost/terms]
+
+
+Processing TermsController#destroy (for 127.0.0.1 at 2010-06-09 19:15:45) [DELETE]
+  Parameters: {"authenticity_token"=>"PFnxvXMcFIMRsaUbeHlwvm5GDIEMnHuUbVY30IMKgaM=", "id"=>"15"}
+  [4;35;1mTerm Load (0.2ms)[0m   [0mSELECT * FROM "terms" WHERE ("terms"."id" = 15) [0m
+  [4;36;1mTerm Destroy (0.3ms)[0m   [0;1mDELETE FROM "terms" WHERE "id" = 15[0m
+Redirected to http://localhost:3000/terms
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/terms/15]
+
+
+Processing TermsController#index (for 127.0.0.1 at 2010-06-09 19:15:45) [GET]
+  [4;35;1mTerm Load (0.8ms)[0m   [0mSELECT * FROM "terms" [0m
+Rendering template within layouts/terms
+Rendering terms/index
+Completed in 27ms (View: 22, DB: 1) | 200 OK [http://localhost/terms]
+2010-06-09T19:56:03-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6817)] Starting job worker
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Update (2.3ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2010-06-09 23:56:03', locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6817' WHERE (id = 8 and (locked_at is null or locked_at < '2010-06-09 19:56:03') and (run_at <= '2010-06-09 23:56:03')) [0m
+2010-06-09T19:56:03-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6817)] acquired lock on TwitterJob
+2010-06-09T19:56:03-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6817)] TwitterJob failed with NameError: undefined local variable or method `logger' for #<struct TwitterJob term_name="hello world"> - 0 failed attempts
+  [4;35;1mDelayed::Backend::ActiveRecord::Job Update (0.5ms)[0m   [0mUPDATE "delayed_jobs" SET "updated_at" = '2010-06-09 23:56:03', "last_error" = 'undefined local variable or method `logger'' for #<struct TwitterJob term_name="hello world">
+/Users/matthewkirk/git/twitter_term_notification/lib/twitter_job.rb:7:in `perform''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/backend/base.rb:65:in `invoke_job''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:122:in `run''
+/Users/matthewkirk/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/timeout.rb:62:in `timeout''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:122:in `run''
+/Users/matthewkirk/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:121:in `run''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:182:in `reserve_and_run_one_job''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:106:in `work_off''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:105:in `times''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:105:in `work_off''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:80:in `start''
+/Users/matthewkirk/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/benchmark.rb:308:in `realtime''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:79:in `start''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:76:in `loop''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/worker.rb:76:in `start''
+/Users/matthewkirk/git/twitter_term_notification/vendor/plugins/delayed_job/lib/delayed/tasks.rb:13
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:636:in `call''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:636:in `execute''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:631:in `each''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:631:in `execute''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:597:in `invoke_with_call_chain''
+/Users/matthewkirk/.rvm/rubies/ruby-1.8.7-p174/lib/ruby/1.8/monitor.rb:242:in `synchronize''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:590:in `invoke_with_call_chain''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:583:in `invoke''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2051:in `invoke_task''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2029:in `top_level''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2029:in `each''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2029:in `top_level''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2068:in `standard_exception_handling''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2023:in `top_level''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2001:in `run''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:2068:in `standard_exception_handling''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/lib/rake.rb:1998:in `run''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/gems/rake-0.8.7/bin/rake:31
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/bin/rake:19:in `load''
+/Users/matthewkirk/.rvm/gems/ruby-1.8.7-p174/bin/rake:19', "attempts" = 1, "run_at" = '2010-06-09 23:56:09' WHERE "id" = 8[0m
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Update (4.2ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2010-06-09 23:56:03' WHERE (id = 8 and locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6817') [0m
+2010-06-09T19:56:03-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6817)] acquired lock on TwitterJob
+2010-06-09T19:56:03-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6817)] TwitterJob failed with NameError: undefined local variable or method `logger' for #<struct TwitterJob term_name="hello world"> - 1 failed attempts
+  [4;35;1mDelayed::Backend::ActiveRecord::Job Update (0.5ms)[0m   [0mUPDATE "delayed_jobs" SET "updated_at" = '2010-06-09 23:56:03', "locked_by" = NULL, "attempts" = 2, "run_at" = '2010-06-09 23:56:24', "locked_at" = NULL WHERE "id" = 8[0m
+2010-06-09T19:56:03-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6817)] 2 jobs processed at 7.4397 j/s, 2 failed ...
+2010-06-09T19:56:13-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6817)] Exiting...
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Update (1.1ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6817') [0m
+2010-06-09T19:56:21-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6832)] Starting job worker
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Update (3.2ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_at = '2010-06-09 23:56:26', locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6832' WHERE (id = 8 and (locked_at is null or locked_at < '2010-06-09 19:56:26') and (run_at <= '2010-06-09 23:56:26')) [0m
+2010-06-09T19:56:26-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6832)] acquired lock on TwitterJob
+  [4;35;1mTerm Load (0.2ms)[0m   [0mSELECT * FROM "terms" WHERE ("terms"."term" = 'hello world') [0m
+  [4;36;1mTerm Load (0.4ms)[0m   [0;1mSELECT * FROM "terms" [0m
+  [4;35;1mTermCount Load (35.1ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 7 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (2.4ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 7 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 8 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 8 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 9 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 9 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTermCount Load (9.2ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 10 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (7.9ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 10 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTermCount Load (9.6ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 11 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (5.8ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 11 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTermCount Load (7.3ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 12 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (13.0ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 12 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTermCount Load (13.2ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 13 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (10.4ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 13 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTermCount Load (105.1ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 14 AND ("term_counts"."date" BETWEEN '2010-06-08 23:56:26' AND '2010-06-09 23:56:25')) [0m
+  [4;36;1mTermCount Load (12.2ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 14 AND ("term_counts"."date" BETWEEN '2010-06-07 23:56:26' AND '2010-06-08 23:56:26')) [0m
+  [4;35;1mTerm Load (0.4ms)[0m   [0mSELECT * FROM "terms" [0m
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Destroy (0.4ms)[0m   [0;1mDELETE FROM "delayed_jobs" WHERE "id" = 8[0m
+2010-06-09T19:56:26-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6832)] TwitterJob completed after 0.4421
+2010-06-09T19:56:26-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6832)] 1 jobs processed at 2.2014 j/s, 0 failed ...
+2010-06-09T19:57:31-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6832)] Exiting...
+  [4;35;1mDelayed::Backend::ActiveRecord::Job Update (1.0ms)[0m   [0mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6832') [0m
+2010-06-09T19:57:35-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6835)] Starting job worker
+2010-06-09T19:59:54-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6835)] Exiting...
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Update (1.1ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6835') [0m
+2010-06-09T19:59:58-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6849)] Starting job worker
+2010-06-09T20:00:29-0400: [Worker(host:Matthew-Kirks-MacBook-Pro.local pid:6849)] Exiting...
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Update (1.1ms)[0m   [0;1mUPDATE "delayed_jobs" SET locked_by = null, locked_at = null WHERE (locked_by = 'host:Matthew-Kirks-MacBook-Pro.local pid:6849') [0m
+  [4;36;1mTerm Load (1.0ms)[0m   [0;1mSELECT * FROM "terms" [0m
+  [4;35;1mTermCount Load (32.2ms)[0m   [0mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 7) [0m
+  [4;36;1mTermCount Load (4.3ms)[0m   [0;1mSELECT * FROM "term_counts" WHERE ("term_counts".term_id = 7) ORDER BY tweet_id DESC LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810862215) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810862215, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:18')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810858727) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810858727, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:15')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810858491) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810858491, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:14')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810857407) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810857407, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:13')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810856235) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810856235, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:12')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810855776) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810855776, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:12')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810855657) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810855657, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:12')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810855275) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810855275, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:11')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810854803) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810854803, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:11')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810854606) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810854606, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:10')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810853911) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810853911, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:10')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810853066) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810853066, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:09')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810851965) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810851965, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:08')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810851271) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810851271, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:07')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810850051) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810850051, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:06')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810847512) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810847512, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:03')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810847195) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810847195, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:01:02')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810843486) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810843486, '2010-06-10 00:01:25', '2010-06-10 00:01:25', 7, '2010-06-10 00:00:58')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810841424) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810841424, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:56')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810839054) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810839054, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:54')[0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810838594) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810838594, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:54')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810838363) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810838363, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:52')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810836872) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810836872, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:52')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810836833) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810836833, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:52')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810835834) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810835834, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:51')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810835622) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810835622, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:51')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810835370) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810835370, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:51')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810834376) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810834376, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:50')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810833210) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810833210, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:48')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810831798) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810831798, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:47')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810831576) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810831576, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:47')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810830450) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810830450, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:46')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810829343) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810829343, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:45')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810829066) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810829066, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:44')[0m
+  [4;35;1mTermCount Load (2.6ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810827700) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810827700, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:43')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810826763) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810826763, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:42')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810826362) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810826362, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:42')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810821823) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810821823, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:38')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810816709) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810816709, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:33')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810815510) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810815510, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:32')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810813642) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810813642, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:30')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810811416) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810811416, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:28')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810811239) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810811239, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:28')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810811210) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810811210, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:28')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810809305) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810809305, '2010-06-10 00:01:26', '2010-06-10 00:01:26', 7, '2010-06-10 00:00:26')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810809305) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810808855) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810808855, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:26')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810808027) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810808027, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:25')[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810806063) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810806063, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:23')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810805441) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810805441, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:23')[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810804686) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810804686, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:22')[0m
+  [4;36;1mTermCount Load (2.7ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810804177) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810804177, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:22')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810804101) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810804101, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:22')[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810803397) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810803397, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:21')[0m
+  [4;36;1mTermCount Load (2.4ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810803365) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810803365, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:21')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810803198) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810803198, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:21')[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810800589) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810800589, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:18')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810800097) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810800097, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:18')[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810800090) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810800090, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:18')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810799489) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810799489, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:17')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810803198) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810800589) LIMIT 1[0m
+  [4;36;1mTermCount Load (1.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810800097) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810800090) LIMIT 1[0m
+  [4;36;1mTermCount Load (1.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810799489) LIMIT 1[0m
+  [4;35;1mTermCount Load (1.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810799185) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810799185, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:17')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810796190) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810796190, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:15')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810794780) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810794780, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:14')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810792727) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810792727, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:12')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810791517) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810791517, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:11')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810789790) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810789790, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:09')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810787654) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810787654, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:08')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810785744) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810785744, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:06')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810785559) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810785559, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:06')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810785073) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810785073, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-10 00:00:05')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810775690) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810775690, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-09 23:59:56')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810775241) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810775241, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-09 23:59:56')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810770550) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810770550, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-09 23:59:51')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810767259) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810767259, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-09 23:59:48')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810767115) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810767115, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-09 23:59:48')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810765824) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810765824, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-09 23:59:47')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810765657) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810765657, '2010-06-10 00:01:27', '2010-06-10 00:01:27', 7, '2010-06-09 23:59:46')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810765559) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810765559, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:46')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810764770) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810764770, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:46')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810764139) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810764139, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:45')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810764063) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810764063, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:45')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810763377) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810763377, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:44')[0m
+  [4;35;1mTermCount Load (2.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810763270) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810763270, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:44')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810762840) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810762840, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:44')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810762024) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810762024, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:43')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810764139) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810764063) LIMIT 1[0m
+  [4;35;1mTermCount Load (1.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810763377) LIMIT 1[0m
+  [4;36;1mTermCount Load (1.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810763270) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810762840) LIMIT 1[0m
+  [4;36;1mTermCount Load (1.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810762024) LIMIT 1[0m
+  [4;35;1mTermCount Load (1.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810761512) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810761512, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:42')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810761175) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810761175, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:42')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810760474) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810760474, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:41')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810759640) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810759640, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:40')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810759421) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810759421, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:40')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810759132) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810759132, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:40')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810758909) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810758909, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:40')[0m
+  [4;35;1mTermCount Load (2.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810758352) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810758352, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:39')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810757391) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810757391, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:38')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810756354) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810756354, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:37')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810756106) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810756106, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:37')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810756039) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810756039, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:37')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810755224) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810755224, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:36')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810754503) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810754503, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:35')[0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810754350) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810754350, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:35')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810752588) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810752588, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:34')[0m
+  [4;35;1mTermCount Load (2.6ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810751216) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810751216, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:32')[0m
+  [4;35;1mTermCount Load (3.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810750607) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810750607, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:32')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810749742) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810749742, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:31')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810748895) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.7ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810748895, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:30')[0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810747585) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810747585, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:29')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810747433) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810747433, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:28')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810742990) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810742990, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:24')[0m
+  [4;35;1mTermCount Load (2.4ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810741113) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810741113, '2010-06-10 00:01:28', '2010-06-10 00:01:28', 7, '2010-06-09 23:59:22')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810740785) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810740785, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:22')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810740557) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810740557, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:21')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810740180) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810740180, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:21')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810737780) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810737780, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:19')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810736425) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810736425, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:17')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810735650) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810735650, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:16')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810735523) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810735523, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:16')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810734838) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810734838, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:16')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810733026) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810733026, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:14')[0m
+  [4;35;1mTermCount Load (3.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810733011) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.7ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810733011, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:14')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810729437) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810729437, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:10')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810729135) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810729135, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:10')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810728875) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810728875, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:10')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810728158) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810728158, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:09')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810727549) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810727549, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:08')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810724315) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810724315, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:05')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810722828) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810722828, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:03')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810722776) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810722776, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:03')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810722679) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810722679, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:03')[0m
+  [4;35;1mTermCount Load (2.4ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810721148) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.5ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810721148, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:01')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810719802) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.6ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810719802, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:59:00')[0m
+  [4;35;1mTermCount Load (3.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810718865) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810718865, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:59')[0m
+  [4;35;1mTermCount Load (2.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810718813) LIMIT 1[0m
+  [4;36;1mTermCount Create (3.0ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810718813, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:59')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810718416) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810718416, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:58')[0m
+  [4;35;1mTermCount Load (4.6ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810717236) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.5ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810717236, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:57')[0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810715940) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810715940, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:56')[0m
+  [4;35;1mTermCount Load (2.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810713809) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810713809, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:54')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810712653) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.5ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810712653, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:53')[0m
+  [4;35;1mTermCount Load (4.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810706298) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810706298, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:46')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810706013) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810706013, '2010-06-10 00:01:29', '2010-06-10 00:01:29', 7, '2010-06-09 23:58:46')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810705840) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810705840, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:46')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810705290) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810705290, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:45')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810704654) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810704654, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:44')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810704408) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810704408, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:44')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810701602) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810701602, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:41')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810701423) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810701423, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:41')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810699290) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810699290, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:39')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810698863) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810698863, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:38')[0m
+  [4;35;1mTermCount Load (3.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810698424) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810698424, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:38')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810698289) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810698289, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:38')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810698157) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810698157, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:38')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810696695) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810696695, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:36')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810695816) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810695816, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:35')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810694742) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810694742, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:34')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810694392) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810694392, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:34')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810689852) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810689852, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:29')[0m
+  [4;35;1mTermCount Load (3.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810687674) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810687674, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:27')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810687351) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810687351, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:27')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810686686) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810686686, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:26')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810685239) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810685239, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:25')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810676625) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810676625, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:16')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810676539) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810676539, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:16')[0m
+  [4;35;1mTermCount Load (2.6ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810676305) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810676305, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:16')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810675573) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810675573, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:15')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810675252) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810675252, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:15')[0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810675232) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810675232, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:15')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810671120) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810671120, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:11')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810670889) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810670889, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:11')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810669885) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810669885, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:10')[0m
+  [4;35;1mTermCount Load (3.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810668620) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810668620, '2010-06-10 00:01:30', '2010-06-10 00:01:30', 7, '2010-06-09 23:58:09')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810667820) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810667820, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:58:08')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810666217) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810666217, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:58:06')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810666021) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810666021, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:58:06')[0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810664568) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810664568, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:58:04')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810664519) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810664519, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:58:04')[0m
+  [4;35;1mTermCount Load (3.6ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810661830) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810661830, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:58:01')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810661824) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810661824, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:58:01')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810657625) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810657625, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:57')[0m
+  [4;35;1mTermCount Load (2.7ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810656482) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810656482, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:56')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810654815) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810654815, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:54')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810652094) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810652094, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:51')[0m
+  [4;35;1mTermCount Load (2.6ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810650826) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810650826, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:50')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810649915) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810649915, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:49')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810648889) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810648889, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:48')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810647263) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810647263, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:46')[0m
+  [4;35;1mTermCount Load (2.4ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810637473) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810637473, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:37')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810634968) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810634968, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:34')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810634403) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810634403, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:33')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810632079) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810632079, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:31')[0m
+  [4;35;1mTermCount Load (2.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810631160) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810631160, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:29')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810629122) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810629122, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:28')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810628611) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810628611, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:27')[0m
+  [4;35;1mTermCount Load (3.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810627795) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810627795, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:27')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810627424) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810627424, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:26')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810626974) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810626974, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:26')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810626610) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810626610, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:25')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810625117) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810625117, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:24')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810624510) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810624510, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:23')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810624476) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810624476, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:23')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810622075) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810622075, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:21')[0m
+  [4;35;1mTermCount Load (2.6ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810627795) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810627424) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810626974) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810626610) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810625117) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810624510) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810624476) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810622075) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810621923) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810621923, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:21')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810621637) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810621637, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:20')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810620608) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.5ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810620608, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:19')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810619723) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810619723, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:18')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810619501) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810619501, '2010-06-10 00:01:31', '2010-06-10 00:01:31', 7, '2010-06-09 23:57:18')[0m
+  [4;35;1mTermCount Load (2.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810619024) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810619024, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:18')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810617773) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810617773, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:17')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810605866) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810605866, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:05')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810605822) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810605822, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:05')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810604371) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810604371, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:03')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810604335) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810604335, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:03')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810604139) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810604139, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:03')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810602599) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810602599, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:01')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810602514) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810602514, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:01')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810602355) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810602355, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:00')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810602204) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810602204, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:57:00')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810600575) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810600575, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:59')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810598693) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810598693, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:57')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810598388) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810598388, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:56')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810597871) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810597871, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:56')[0m
+  [4;35;1mTermCount Load (3.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810597793) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810597793, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:56')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810596923) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810596923, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:55')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810593788) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810593788, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:52')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810593299) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810593299, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:51')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810592560) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810592560, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:50')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810591117) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810591117, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:49')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810589058) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810589058, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:47')[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810586659) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810586659, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:44')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810585735) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810585735, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:43')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810585626) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810585626, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:43')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810585530) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810585530, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:43')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810585017) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810585017, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:43')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810580674) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810580674, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:38')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810578389) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810578389, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:36')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810575739) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810575739, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:33')[0m
+  [4;35;1mTermCount Load (2.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810574154) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810574154, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:32')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810571129) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810571129, '2010-06-10 00:01:32', '2010-06-10 00:01:32', 7, '2010-06-09 23:56:29')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810569622) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810569622, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:27')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810568895) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810568895, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:26')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810563488) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810563488, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:21')[0m
+  [4;35;1mTermCount Load (3.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810557861) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810557861, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:15')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810557268) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.4ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810557268, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:15')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810554810) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810554810, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:12')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810554308) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810554308, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:12')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810553657) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810553657, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:11')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810552858) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810552858, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:10')[0m
+  [4;35;1mTermCount Load (2.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810552752) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810552752, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:10')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810552553) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810552553, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:10')[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810551898) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810551898, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:09')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810551609) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.5ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810551609, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:09')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810549961) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810549961, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:07')[0m
+  [4;35;1mTermCount Load (2.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810549198) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810549198, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:07')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810557268) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810554810) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810554308) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810553657) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810552858) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810552752) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810552553) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810551898) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810551609) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810549961) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810549198) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810549057) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810549057, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:06')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810548507) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810548507, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:06')[0m
+  [4;36;1mTermCount Load (3.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810544379) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810544379, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:01')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810544339) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810544339, '2010-06-10 00:01:33', '2010-06-10 00:01:33', 7, '2010-06-09 23:56:01')[0m
+  [4;36;1mTermCount Load (2.7ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810532958) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810532958, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:50')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810529196) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810529196, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:46')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810528342) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810528342, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:45')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810524296) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810524296, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:41')[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810523402) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810523402, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:40')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810521767) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810521767, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:38')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810518116) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810518116, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:34')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810518084) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810518084, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:34')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810517262) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810517262, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:34')[0m
+  [4;36;1mTermCount Load (2.8ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810516432) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810516432, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:33')[0m
+  [4;36;1mTermCount Load (2.5ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810513689) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810513689, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:30')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810513368) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810513368, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:29')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810512913) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810512913, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:29')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810512882) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810512882, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:29')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810512789) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810512789, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:29')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810529196) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810528342) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810524296) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810523402) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.4ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810521767) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810518116) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810518084) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810517262) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810516432) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810513689) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810513368) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810512913) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810512882) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810512789) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810511327) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810511327, '2010-06-10 00:01:34', '2010-06-10 00:01:34', 7, '2010-06-09 23:55:27')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810511163) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810511163, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:27')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810509794) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810509794, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:26')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810508174) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810508174, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:24')[0m
+  [4;36;1mTermCount Load (2.8ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810506255) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810506255, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:22')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810504712) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810504712, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:20')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810503321) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810503321, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:19')[0m
+  [4;36;1mTermCount Load (2.8ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810502194) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810502194, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:18')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810502090) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810502090, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:18')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810500996) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810500996, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:17')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810500688) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810500688, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:16')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810500135) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810500135, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:16')[0m
+  [4;36;1mTermCount Load (2.8ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810498773) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810498773, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:14')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810498032) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810498032, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:14')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810496460) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810496460, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:12')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810495672) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810495672, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:11')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810494789) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810494789, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:10')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810494583) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810494583, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:10')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810493088) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810493088, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:09')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810491229) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810491229, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:07')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810489992) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810489992, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:05')[0m
+  [4;36;1mTermCount Load (2.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810488728) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810488728, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:04')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810488169) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810488169, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:03')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810487840) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810487840, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:03')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810487175) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810487175, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:02')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810487025) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810487025, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:02')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810484943) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810484943, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:00')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810484913) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810484913, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:55:00')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810484297) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810484297, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:59')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810484220) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810484220, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:59')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810482288) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810482288, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:57')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465963) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810465963, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:40')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465892) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810465892, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:40')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465784) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810465784, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:40')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465557) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810465557, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:40')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465419) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810465419, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:40')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465132) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810465132, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:40')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810462030) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810462030, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:36')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810461457) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810461457, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:36')[0m
+  [4;36;1mTermCount Load (2.7ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810460745) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810460745, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:35')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810460588) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810460588, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:35')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810459759) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810459759, '2010-06-10 00:01:35', '2010-06-10 00:01:35', 7, '2010-06-09 23:54:34')[0m
+  [4;36;1mTermCount Load (3.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810457433) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.5ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810457433, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:32')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810456260) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810456260, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:31')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810453759) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.5ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810453759, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:28')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810453142) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810453142, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:27')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465963) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465892) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465784) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465557) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465419) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.9ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810465132) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810462030) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810461457) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810460745) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.3ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810460588) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810459759) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810457433) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810456260) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810453759) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810453142) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.4ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810452565) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810452565, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:27')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810451499) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810451499, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:26')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810451115) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810451115, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:25')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810449689) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810449689, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:24')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810448527) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810448527, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:23')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810448006) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810448006, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:22')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810446635) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810446635, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:21')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810445849) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810445849, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:20')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810444630) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810444630, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:19')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810444578) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810444578, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:19')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810443755) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810443755, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:18')[0m
+  [4;35;1mTermCount Load (3.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810442440) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810442440, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:17')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810442131) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810442131, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:16')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810441074) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810441074, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:15')[0m
+  [4;35;1mTermCount Load (3.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810440754) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810440754, '2010-06-10 00:01:36', '2010-06-10 00:01:36', 7, '2010-06-09 23:54:15')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810426185) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810426185, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:54:00')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810426045) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810426045, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:58')[0m
+  [4;35;1mTermCount Load (2.5ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810425949) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810425949, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:59')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810425749) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810425749, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:59')[0m
+  [4;35;1mTermCount Load (2.8ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810425483) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810425483, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:59')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810424660) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810424660, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:58')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810424285) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810424285, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:58')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810421822) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810421822, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:55')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810419174) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810419174, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:52')[0m
+  [4;35;1mTermCount Load (2.4ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810419098) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810419098, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:52')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810417050) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810417050, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:50')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810416661) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810416661, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:50')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810414816) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810414816, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:48')[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810414604) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810414604, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:48')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810413521) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810413521, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:46')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810427394) LIMIT 1[0m
+  [4;36;1mTermCount Create (0.3ms)[0m   [0;1mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810427394, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:54:01')[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810426185) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810426045) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810425949) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810425749) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810425483) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810424660) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.2ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810424285) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810421822) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.1ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810419174) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810419098) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810417050) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810416661) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.0ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810414816) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810414604) LIMIT 1[0m
+  [4;35;1mTermCount Load (2.4ms)[0m   [0mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810413521) LIMIT 1[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810413449) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810413449, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:46')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810413269) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810413269, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:46')[0m
+  [4;36;1mTermCount Load (3.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810410122) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810410122, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:43')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810410044) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810410044, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:43')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810409669) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810409669, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:42')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810409239) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810409239, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:42')[0m
+  [4;36;1mTermCount Load (2.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810409013) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810409013, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:42')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810408528) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810408528, '2010-06-10 00:01:37', '2010-06-10 00:01:37', 7, '2010-06-09 23:53:41')[0m
+  [4;36;1mTermCount Load (3.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810406746) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810406746, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:39')[0m
+  [4;36;1mTermCount Load (13.6ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810404309) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810404309, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:37')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810401253) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810401253, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:34')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810399002) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810399002, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:32')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810398978) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810398978, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:32')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810398856) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810398856, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:31')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810398234) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810398234, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:31')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810397726) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810397726, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:30')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810397284) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810397284, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:30')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810396050) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810396050, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:29')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810394064) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810394064, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:27')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810392027) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810392027, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:25')[0m
+  [4;36;1mTermCount Load (2.9ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810391821) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810391821, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:24')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810390660) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810390660, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:23')[0m
+  [4;36;1mTermCount Load (2.4ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810388539) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810388539, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:21')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810387749) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810387749, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:20')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810387458) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810387458, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:20')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810383096) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810383096, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:16')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810380281) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810380281, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:13')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810380142) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810380142, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:13')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810378499) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810378499, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:11')[0m
+  [4;36;1mTermCount Load (2.7ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810377093) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810377093, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:10')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810376701) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810376701, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:09')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810376290) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810376290, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:09')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810375439) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810375439, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:08')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810372609) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810372609, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:05')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810370968) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810370968, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:03')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810370233) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810370233, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:02')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810369917) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810369917, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:02')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810369897) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810369897, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:02')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810369552) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810369552, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:02')[0m
+  [4;36;1mTermCount Load (2.7ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810369104) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810369104, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:01')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810369025) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810369025, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:01')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810368329) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810368329, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:00')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810368319) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810368319, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:53:00')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810365476) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810365476, '2010-06-10 00:01:38', '2010-06-10 00:01:38', 7, '2010-06-09 23:52:57')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810365250) LIMIT 1[0m
+  [4;35;1mTermCount Create (68.2ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810365250, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:57')[0m
+  [4;36;1mTermCount Load (2.5ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810365224) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810365224, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:57')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810365105) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810365105, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:57')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810363406) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810363406, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:55')[0m
+  [4;36;1mTermCount Load (2.5ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810362336) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810362336, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:54')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810362285) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810362285, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:54')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810360726) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810360726, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:52')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810356971) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810356971, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:48')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810356895) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810356895, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:48')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810355334) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810355334, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:47')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810354286) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810354286, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:46')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810353434) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810353434, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:45')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810353305) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810353305, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:45')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810352365) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810352365, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:44')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810351910) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810351910, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:43')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810351332) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810351332, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:43')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810351245) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810351245, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:43')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810349573) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810349573, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:41')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810349256) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810349256, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:41')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810348040) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810348040, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:39')[0m
+  [4;36;1mTermCount Load (2.8ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810347372) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810347372, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:39')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810347004) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810347004, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:38')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810345367) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810345367, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:37')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810343805) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810343805, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:35')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810343384) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810343384, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:35')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810342537) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810342537, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:34')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810342170) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810342170, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:33')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810341678) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810341678, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:33')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810340029) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810340029, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:31')[0m
+  [4;36;1mTermCount Load (2.4ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810339714) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.5ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810339714, '2010-06-10 00:01:39', '2010-06-10 00:01:39', 7, '2010-06-09 23:52:31')[0m
+  [4;36;1mTermCount Load (3.0ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810338690) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810338690, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:30')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810336986) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810336986, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:28')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810335759) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810335759, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:27')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810335465) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810335465, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:26')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810335422) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810335422, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:26')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810335082) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810335082, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:26')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810334940) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810334940, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:26')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810334272) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810334272, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:25')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810332930) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810332930, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:24')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810331130) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810331130, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:22')[0m
+  [4;36;1mTermCount Load (2.1ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810330148) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810330148, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:21')[0m
+  [4;36;1mTermCount Load (2.3ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810328427) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810328427, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:19')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810328324) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.4ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810328324, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:19')[0m
+  [4;36;1mTermCount Load (2.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810327392) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.5ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810327392, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:18')[0m
+  [4;36;1mTermCount Load (3.2ms)[0m   [0;1mSELECT "term_counts".id FROM "term_counts" WHERE ("term_counts"."tweet_id" = 15810326073) LIMIT 1[0m
+  [4;35;1mTermCount Create (0.3ms)[0m   [0mINSERT INTO "term_counts" ("tweet_id", "created_at", "updated_at", "term_id", "date") VALUES(15810326073, '2010-06-10 00:01:40', '2010-06-10 00:01:40', 7, '2010-06-09 23:52:17')[0m
+
+
+Processing TermsController#index (for 127.0.0.1 at 2010-06-09 20:01:40) [GET]
+  [4;36;1mTerm Load (0.6ms)[0m   [0;1mSELECT * FROM "terms" [0m
+Rendering template within layouts/terms
+Rendering terms/index
+Completed in 32ms (View: 29, DB: 1) | 200 OK [http://localhost/terms]

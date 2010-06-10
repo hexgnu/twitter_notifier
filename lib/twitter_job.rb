@@ -4,6 +4,9 @@ class TwitterJob < Struct.new(:term_name)
   
   
   def perform
+    puts "Starting to run background job"
+    
+    
     # do stuff
     if term_name.blank?
       @terms = Term.all
@@ -13,16 +16,15 @@ class TwitterJob < Struct.new(:term_name)
     
     
     @terms.each do |term|
-     @page = 0
-     
-     
-     if term.term_counts.blank?
+      puts "Parsing data for #{term.term}"      
+      @page = 0
+      if term.term_counts.blank?
        highest_id = nil
-     else
+      else
        highest_id = term.term_counts.find(:first, :order => "tweet_id DESC").tweet_id
-     end
-     seed_query = "?q=#{CGI.escape(term.term)}&since_id=#{highest_id}"
-     parse_twitter_results(term, seed_query, highest_id)
+      end
+      seed_query = "?q=#{CGI.escape(term.term)}&since_id=#{highest_id}"
+      parse_twitter_results(term, seed_query, highest_id)
     end
   
 
@@ -43,7 +45,7 @@ class TwitterJob < Struct.new(:term_name)
     end
     
     # if within threshold then deliver
-    PostOffice.deliver_threshold_notification(@payload)
+    #PostOffice.deliver_threshold_notification(@payload)
   end
   
   def parse_twitter_results(term, query, highest_id)

@@ -51,6 +51,7 @@ class TermsController < ApplicationController
     respond_to do |format|
       if @term.save
         flash[:notice] = 'Term was successfully created.'
+        Delayed::Job.enqueue(TwitterJob.new(params[:term][:term]))
         format.html { redirect_to(@term) }
         format.xml  { render :xml => @term, :status => :created, :location => @term }
       else
